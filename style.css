@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #EDF2F4;
+}
+
+nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #D90429;
+    padding: 1.5ch 2ch;
+    transition: top 0.3s;
+}
+nav a {
+    color: #EDF2F4;
+    text-decoration: none;
+    display: block;
+    font:bold 1.8ch 'Pacifico' , cursive;
+}
+nav .nav-list {
+    background-color: #2B2D42;
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    top: auto;
+    left: 0;
+    right: 0;
+    transition: top 10s;
+    transition: bottom 10s;
+}
+nav .nav-list a {
+    font: 2ch 'Montserrat';
+    padding: 1ch;
+}
+nav .nav-list a:hover {
+    background-color: #EF233C;
+}
+nav .icon {
+    display: block;
+}
+
+/* nav end */
+
+/* header */
+header {
+
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EDF2F4;
+}
+header h1 {
+    
+    color: #2B2D42;
+    margin-top: 60px;
+    font: bold 4ch 'Montserrat',sans-serif;
+}
+header .img {
+    margin-top: 1.5ch;
+    border-radius: 100%;
+    width: 120px;
+    height: 120px;
+    background-image: url(https://bit.ly/3rBoaoR);
+    background-image: url(img/dimas.jpg);
+    background-size: 180%;
+    background-position: 55% 20%;
+    transition: .3s;
+}
+header .img:hover {
+    background-size: 200%;
+    background-position: 50% 20%;
+}
+header h2 {
+    color: #2B2D42;
+    margin-top: .5ch;
+    font: bold 2.8ch 'Montserrat', sans-serif;
+}
+header p {  
+    color: #2B2D42;
+    text-align: center;  
+    font: 1.7ch 'Poppins', sans-serif;    
+}
+header svg:first-child {
+    margin-top: 2ch;
+}
+/* Header End */
+
+/* Content */
+section.about {
+    background-color: #4c4e63;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+section.about h2 {
+    color: #EDF2F4;
+    margin-top: -1ch;
+    font: bold 4ch 'Montserrat',sans-serif;
+}
+section.about .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+}
+section.about .wrapper p {
+    padding: 1ch;
+    text-indent: 1ch;
+    color: #EDF2F4;
+    margin-top: 1ch;
+    flex: 1;
+    font: italic 1.8ch 'Poppins',sans-serif;
+}
+
+/*  */
+section.myProject {
+    background-color: #EDF2F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.myProject .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+}
+section.myProject .wrapper p {
+    text-indent: 1ch;
+    color: #2B2D42;
+    margin-top: 1ch;
+    flex: 1;
+    font: italic 1.8ch 'Poppins',sans-serif;
+
+}
+section.myProject .wrapper h2 {
+    color: #2B2D42;
+    margin-top: -1ch;
+    font: bold 4ch 'Montserrat',sans-serif;
+}
+
+
+section.myProject .project {
+    margin-top: 2ch;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section.myProject .project-item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+section.myProject .iframe-container{
+    position: relative;
+    width: 90%;
+    max-width: 110%;
+    padding-bottom: 56.25%; 
+    height: 0;
+}
+/* section.myProject .project-item:nth-child(2) .iframe-container{
+    margin-top: 11em;
+    position: relative;
+    width: 90%;
+    max-width: 110%;
+    padding-bottom: 56.25%; 
+    height: 0;
+} */
+section.myProject .iframe-container iframe{ 
+    position: absolute;
+    z-index: 1;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 120%;
+}
+section.myProject .project-item .i-desc p {
+    color: #EDF2F4;
+    padding: 0em 1em;
+    padding-bottom: 1em;
+    text-align: justify;
+    box-sizing: border-box;
+}
+section.myProject .project-item .i-desc {
+    top: 100%;
+    position: absolute;
+    background-color: #EF233C;
+    box-sizing: border-box;
+}  
+section.myProject .project-item .i-desc::before {
+    position: absolute;
+    z-index: 0;
+    bottom: 100%;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2.5ch;
+    border-top-left-radius:2ch ;
+    border-top-right-radius:2ch ;    
+    background-color: #ca1127;
+}
+
+.c-svg {
+    margin-top: 10rem;
+    margin-bottom: -1ch;
+}
+section.contact {
+    padding-top: 3rem;
+    position: relative;
+    background-color:#4c4e63 ;
+}
+section.contact .wrapper {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font: 2ch 'Poppins', sans-serif ;
+    color: #EDF2F4;
+}
+section.contact .wrapper h2 {
+    margin-top: -1ch;
+    margin-bottom: 1rem;
+    font: bold 4ch 'Montserrat',sans-serif;
+}
+section.contact .wrapper form {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+}
+section.contact input[type=text],section.contact textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1ch;
+    margin-bottom: 1ch;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    box-shadow: 1px 1px 3px rgb(196, 196, 196);
+    resize: vertical;
+}
+section.contact input[type=submit] {
+    padding: 1.5ch .5ch;
+    width: 20vw;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    box-shadow: 1px 1px 3px rgb(196, 196, 196);
+    background-color:#EDF2F4;
+    color: #EF233C;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+footer .wrapper {
+    font: 2ch 'Poppins', sans-serif ;
+    width: 100%;
+    text-align: center;
+    padding: 3rem 0;
+}
+/* Responsive */
+@media screen and (max-width: 350px) {
+    header h2 {
+        font: bold 2.2ch 'Montserrat', sans-serif;
+    }
+    header p {   
+        font: 1.2ch 'Poppins', sans-serif;    
+    }
+}
+
+@media screen and (min-width: 576px) {
+	nav .icon {
+        display: none;
+    }
+    nav .nav-list {
+        background-color: #D90429;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: top 10s;
+        transition: bottom 10s;
+    }
+    nav {
+        padding: 0ch 5ch;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    section.about .wrapper {
+        flex-direction: row;
+    }
+}
